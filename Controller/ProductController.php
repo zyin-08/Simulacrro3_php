@@ -2,6 +2,7 @@
 
 session_start();
 
+
 $product = new ProductController();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
