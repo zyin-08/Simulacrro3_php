@@ -231,7 +231,6 @@ class UserController
             $stmt->bindParam(':icon', $file);
             $stmt->bindParam(':admin', $admin);
 
-            echo __LINE__;
             $stmt->execute();
             // Check if the query insert any data
             
@@ -258,7 +257,6 @@ class UserController
                 exit();
             }
         } catch (PDOException $e) {
-            echo __LINE__ . var_dump($e);
             $_SESSION['failMessage'] = ['message' => $e->getMessage(), 'context' => 'Fail Creating a New User'];
         }
     }
